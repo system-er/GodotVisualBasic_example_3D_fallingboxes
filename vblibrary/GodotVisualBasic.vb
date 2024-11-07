@@ -13,7 +13,6 @@ Public Class GodotVisualBasic
         GD.Print("hello world from visualbasic from node ", node3d.Name)
         Randomize()
 
-        'spawn a floor
         Dim cb = New CsgBox3D()
         Dim newscale = New Vector3()
         newscale.X = 5
@@ -23,7 +22,6 @@ Public Class GodotVisualBasic
         cb.UseCollision = True
         node3d.AddChild(cb)
 
-        'SpawnBox(0, 5, 0)
         ct = 0
     End Sub
 
@@ -57,9 +55,6 @@ Public Class GodotVisualBasic
         rb.Translate(newt)
 
         Dim newr = New Vector3()
-        'newr.X = Rnd() * 180
-        'newr.Y = Rnd() * 180
-        'newr.Z = Rnd() * 180
         rb.Rotate(New Vector3(1, 0, 0), Rnd() * 180)
 
         cs.AddChild(cb)

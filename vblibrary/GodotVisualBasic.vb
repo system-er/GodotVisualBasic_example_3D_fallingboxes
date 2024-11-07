@@ -53,9 +53,7 @@ Public Class GodotVisualBasic
         newt.Y = y
         newt.Z = z
         rb.Translate(newt)
-
-        Dim newr = New Vector3()
-        rb.Rotate(New Vector3(1, 0, 0), Rnd() * 180)
+        rb.Rotate(New Vector3(1, 0, 0), Rnd() * 360)
 
         cs.AddChild(cb)
         rb.AddChild(cs)

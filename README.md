@@ -2,4 +2,4 @@
 example for falling boxes, every second falls a random-colored box down.
 
 falling boxes:    
-![Pic1](boxes3d.jpg)
+![Pic1](boxes3d.JPG)

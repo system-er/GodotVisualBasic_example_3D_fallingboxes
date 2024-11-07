@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://fgdgfalt65ge"]
+
+[ext_resource type="Script" path="res://node3d.cs" id="1_wnd2c"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_wnd2c")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.900645, 0.0960975, -0.423797, 3.67762e-09, 0.975242, 0.22114, 0.434555, -0.199169, 0.878347, -2.34179, 2.44189, 5.22761)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.439958, 0.770224, -0.461727, -0.531327, 0.637774, 0.557617, 0.723967, 0, 0.689834, -6.01461, 2.97582, 1.63865)
+shadow_enabled = true

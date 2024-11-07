@@ -13,6 +13,7 @@ Public Class GodotVisualBasic
         GD.Print("hello world from visualbasic from node ", node3d.Name)
         Randomize()
 
+        'upper floor
         Dim cb = New CsgBox3D()
         Dim newscale = New Vector3()
         newscale.X = 5
@@ -20,6 +21,16 @@ Public Class GodotVisualBasic
         newscale.Z = 5
         cb.Scale = newscale
         cb.UseCollision = True
+        node3d.AddChild(cb)
+        'lower floor
+        cb = New CsgBox3D()
+        newscale = New Vector3()
+        newscale.X = 10
+        newscale.Y = 0.5
+        newscale.Z = 10
+        cb.Scale = newscale
+        cb.UseCollision = True
+        cb.Translate(New Vector3(0, -5, 0))
         node3d.AddChild(cb)
 
         ct = 0

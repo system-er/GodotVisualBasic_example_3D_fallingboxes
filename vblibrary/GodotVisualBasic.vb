@@ -15,20 +15,12 @@ Public Class GodotVisualBasic
 
         'upper floor
         Dim cb = New CsgBox3D()
-        Dim newscale = New Vector3()
-        newscale.X = 5
-        newscale.Y = 0.5
-        newscale.Z = 5
-        cb.Scale = newscale
+        cb.Scale = New Vector3(5, 0.5, 5)
         cb.UseCollision = True
         node3d.AddChild(cb)
         'lower floor
         cb = New CsgBox3D()
-        newscale = New Vector3()
-        newscale.X = 10
-        newscale.Y = 0.5
-        newscale.Z = 10
-        cb.Scale = newscale
+        cb.Scale = New Vector3(10, 0.5, 10)
         cb.UseCollision = True
         cb.Translate(New Vector3(0, -5, 0))
         node3d.AddChild(cb)
@@ -52,18 +44,10 @@ Public Class GodotVisualBasic
         cs.Shape = bs
 
         Dim mat = New StandardMaterial3D()
-        Dim color = New Color()
-        color.R = Rnd()
-        color.G = Rnd()
-        color.B = Rnd()
-        mat.AlbedoColor = color
+        mat.AlbedoColor = New Color(Rnd(), Rnd(), Rnd())
         cb.Material = mat
 
-        Dim newt = New Vector3()
-        newt.X = x
-        newt.Y = y
-        newt.Z = z
-        rb.Translate(newt)
+        rb.Translate(New Vector3(x, y, z))
         rb.Rotate(New Vector3(1, 0, 0), Rnd() * 360)
 
         cs.AddChild(cb)

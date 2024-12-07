@@ -9,6 +9,14 @@ Public Class GodotVisualBasic
         node3d = n
     End Sub
 
+    Public Sub Finalize()
+        Dim Childs = node3d.GetChildren()
+        For Each c In Childs
+            node3d.QueueFree()
+        Next
+    End Sub
+
+
     Public Sub _Ready()
         GD.Print("hello world from visualbasic from node ", node3d.Name)
         Randomize()
